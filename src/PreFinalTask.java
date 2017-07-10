@@ -10,4 +10,16 @@ public class PreFinalTask {
     outputSet.addAll(inputList);
     return new ArrayList<>(outputSet);
   }
+
+  public List<Integer> removeDuplicateValuesSecondSolution (List<Integer> inputList){
+    List<Integer> tempList = inputList;
+    for (int i = 0; i < inputList.size(); i++) {
+      for (int j = (i + 1); j < inputList.size(); j++) {
+        if(inputList.get(i) == inputList.get(j)){
+          tempList.remove(tempList.get(i));
+        }
+      }
+    }
+    return tempList;
+  }
 }

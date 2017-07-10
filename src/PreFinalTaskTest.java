@@ -11,7 +11,7 @@ public class PreFinalTaskTest {
 
   @Test
   public void testRemoveDuplicatesEquals() {
-    List<Integer> inputList = new ArrayList<>(Arrays.asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 5, 6));
+    List<Integer> inputList = new ArrayList<>(Arrays.asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6));
     List<Integer> expectedList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6));
     assertEquals(expectedList, preFinalTask.removeDuplicateValues(inputList));
   }
@@ -21,5 +21,19 @@ public class PreFinalTaskTest {
     List<Integer> inputList = new ArrayList<>(Arrays.asList(1, 1, 3, 3, 4, 4, 5, 5, 5));
     List<Integer> expectedList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
     assertNotEquals(expectedList, preFinalTask.removeDuplicateValues(inputList));
+  }
+
+  @Test
+  public void testRemoveDuplicatesEqualsSecondSolution() {
+    List<Integer> inputList = new ArrayList<>(Arrays.asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6));
+    List<Integer> expectedList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6));
+    assertEquals(expectedList, preFinalTask.removeDuplicateValuesSecondSolution(inputList));
+  }
+
+  @Test
+  public void testRemoveDuplicatesNotEqualsSecondSolution() {
+    List<Integer> inputList = new ArrayList<>(Arrays.asList(1, 1, 3, 3, 4, 4, 5, 5));
+    List<Integer> expectedList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+    assertNotEquals(expectedList, preFinalTask.removeDuplicateValuesSecondSolution(inputList));
   }
 }
